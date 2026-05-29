@@ -4,7 +4,8 @@ def run_tenant_intake():
     
     # Gathering baseline data
     tenant_name = input("Enter your full name: ")
-    unit_number = input("Enter your apartment/unit number: ")
+    street_address = input("Enter your street address: ")
+    unit_number = input("Enter your apartment/unit number (or type N/A): ")
     
     # Gathering the triage variables for the Resolve engine
     print("\n--- System Status ---")
@@ -21,6 +22,7 @@ def run_tenant_intake():
     # Packing everything into a dictionary to hand off to your main logic
     intake_data = {
         "tenant_name": tenant_name,
+        "street_address": street_address,
         "unit_number": unit_number,
         "system_mode": system_mode,
         "current_indoor_temp": current_temp,
