@@ -1,0 +1,10 @@
+{
+  "rule_name": "Dead Thermostat Check",
+  "trigger_condition": {
+    "system_mode": "Off",
+    "thermostat_screen": "Blank"
+  },
+  "tenant_action": "Please gently pull the thermostat faceplate off the wall and replace the 2 AA batteries. Wait 30 seconds.",
+  "success_path": "Log issue as resolved and close the ticket.",
+  "fail_path": "Trigger dispatch_logic.py"
+}
